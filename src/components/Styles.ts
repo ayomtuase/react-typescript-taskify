@@ -11,11 +11,19 @@ export const Form = tw.form`
 `;
 
 export const Input = styled.input`
-  ${tw`h-[74px] rounded-[50px] 
-  flex-grow px-5 text-2xl
-  `}  
-`
-Input.defaultProps = { type: 'text' }
+  ${tw`
+  rounded-[50px] 
+  shadow-[inset 0px 0px 5px rgba(0,0,0,1)]
+  focus:shadow-[0 0 10px 9999px rgba(0, 0, 0, 0.5)]
+  focus:outline-none
+  max-w-full
+  flex-grow
+  pl-8 
+  py-5  
+  text-2xl  
+  `}
+`;
+Input.defaultProps = { type: "text" };
 
 export const Button = tw.button`
   absolute
@@ -26,5 +34,7 @@ export const Button = tw.button`
   right-0
   h-[50px]
   w-[50px]
+  shadow-[0 0 10px black]
   hover:bg-[#388ae2]
-`
+  active:scale-75
+`;
