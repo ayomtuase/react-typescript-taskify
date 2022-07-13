@@ -37,4 +37,5 @@ export const Button = tw.button`
   shadow-[0 0 10px black]
   hover:bg-[#388ae2]
   active:scale-75
+  duration-200
 `;

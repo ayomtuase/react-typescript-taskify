@@ -1,10 +1,23 @@
 import { Form, Input, Button } from "./Styles";
 
-const InputField = (): JSX.Element => {
+interface Props {
+  todo: string,
+  setTodo: React.Dispatch<React.SetStateAction<string>>,
+  handleTodoSubmit: (e: React.FormEvent<HTMLFormElement>) => void,
+  inputRef: React.MutableRefObject<HTMLInputElement>
+}
+
+const InputField = ({todo, setTodo, handleTodoSubmit, inputRef}: Props): JSX.Element => {
+
+  
   return (
-    <Form>
-      <Input placeholder="Enter your task" />
-      <Button type="submit">GO</Button>      
+    <Form onSubmit={e => handleTodoSubmit(e)}>
+      <Input placeholder="Enter your task"
+        value={todo}
+        onChange={e => setTodo(e.target.value)}
+        ref={inputRef}        
+      />
+      <Button type="submit" className="">GO</Button>
     </Form>
   );
 };
