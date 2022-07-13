@@ -8,7 +8,7 @@ function App(): JSX.Element {
   const [todo, setTodo] = useState('');
   const inputRef = useRef<HTMLInputElement>(null!);
 
-  const handleTodoSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleAddTodo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setTodo('')
     inputRef.current.blur();
@@ -20,9 +20,10 @@ function App(): JSX.Element {
       <InputField
         todo={todo}
         setTodo={setTodo}
-        handleTodoSubmit={handleTodoSubmit}
+        handleAddTodo={handleAddTodo}
         inputRef={inputRef}
       />
+      
 
     </AppContainer>
   );

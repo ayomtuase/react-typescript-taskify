@@ -1,5 +1,4 @@
-import tw from "twin.macro";
-import styled from "@emotion/styled";
+import tw, { styled } from "twin.macro";
 
 export const Form = tw.form`
   flex
@@ -36,6 +35,5 @@ export const Button = tw.button`
   w-[50px]
   shadow-[0 0 10px black]
   hover:bg-[#388ae2]
-  active:scale-75
   duration-200
 `;

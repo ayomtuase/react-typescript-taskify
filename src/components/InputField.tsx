@@ -3,21 +3,20 @@ import { Form, Input, Button } from "./Styles";
 interface Props {
   todo: string,
   setTodo: React.Dispatch<React.SetStateAction<string>>,
-  handleTodoSubmit: (e: React.FormEvent<HTMLFormElement>) => void,
+  handleAddTodo: (e: React.FormEvent<HTMLFormElement>) => void,
   inputRef: React.MutableRefObject<HTMLInputElement>
 }
 
-const InputField = ({todo, setTodo, handleTodoSubmit, inputRef}: Props): JSX.Element => {
+const InputField = ({ todo, setTodo, handleAddTodo, inputRef }: Props): JSX.Element => {
 
-  
   return (
-    <Form onSubmit={e => handleTodoSubmit(e)}>
+    <Form onSubmit={e => handleAddTodo(e)}>
       <Input placeholder="Enter your task"
         value={todo}
         onChange={e => setTodo(e.target.value)}
-        ref={inputRef}        
+        ref={inputRef}
       />
-      <Button type="submit" className="">GO</Button>
+      <Button type="submit" className="active:scale-75">GO</Button>
     </Form>
   );
 };
