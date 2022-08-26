@@ -1,5 +1,12 @@
 # react-typescript-taskify
 
+Inspired by [Freecodecamp React with Typescript YT course](https://www.youtube.com/watch?v=FJDVKeh7RJI)
+
+<p>Helped me to learn the following concepts that were not taught in the video</p>
+
+- useReducer hook
+- React Context and useContext hook
+- [twin.macro](https://www.npmjs.com/package/twin.macro)(a library that blends the magic of Tailwind with the flexibility of css-in-js)
 
 # Getting Started with Create React App
 
